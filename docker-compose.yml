@@ -50,6 +50,9 @@ services:
       # timezone inside container
       - TZ
 
+      # license
+      - MM_LICENSE
+
       # necessary Mattermost options/variables (see env.example)
       - MM_SQLSETTINGS_DRIVERNAME
       - MM_SQLSETTINGS_DATASOURCE
@@ -59,6 +62,8 @@ services:
 
       # additional settings
       - MM_SERVICESETTINGS_SITEURL
+      - MM_TEAMSETTINGS_ENABLEOPENSERVER
+      - MM_PLUGINSETTINGS_ENABLEUPLOADS
 
 # If you use rolling image tags and feel lucky watchtower can automatically pull new images and
 # instantiate containers from it. https://containrrr.dev/watchtower/
